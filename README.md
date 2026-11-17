@@ -39,8 +39,31 @@ installed p2021 build signed with a different key, and you have to uninstall tha
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
+> **[v1.0.0](https://github.com/Finn013/graff-patches/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;9 patches total
+<details open>
+<summary>📦 Telegraph Plus&nbsp;&nbsp;•&nbsp;&nbsp;9 patches</summary>
+<br>
 
-The full generated list appears here after the first release.
+**Package name:** `ir.p2021.telegraph`
+
+**🎯 Supported versions:**
+
+| 13.0.2.0 |
+| :---: |
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Block Graph servers](#block-graph-servers) | Points the Graph Messenger remote config (ads ids, forced update version, update nag, recommended chats) and the Graph AI API to 127.0.0.1, so the app never contacts graphmessenger.com. |  |
+| [Change package name](#change-package-name) | Changes the package to ir.finni.graff (configurable) so Graff installs next to the original Telegraph Plus. Rewrites the manifest (providers, permissions) and package strings in code. A renamed app is a separate app: it has its own login and data. | • Package name |
+| [Disable analytics](#disable-analytics) | Stops AppMetrica (Yandex) from sending data right after it is activated, turns off Firebase Analytics collection and removes the AppMetrica preload provider. |  |
+| [Disable signature check](#disable-signature-check) | Required. Disables p2021's self signature check ("Your Telegraph Messenger is modified") and the hidden package name check that closes the app, so the re-signed app starts. |  |
+| [Graff branding](#graff-branding) | Renames the app (default "Graff") and replaces the default launcher icon with the Graff adaptive icon. | • App name<br>• Launcher icon |
+| [Raccoon intro](#raccoon-intro) | Replaces the welcome screen logo textures: a raccoon peeks over the Telegram sphere, signed "by Nott". |  |
+| [Remove P2021 dialogs](#remove-p2021-dialogs) | Removes the "P2021_MODS - Subscribe / JOIN US" channel dialogs (on app start and in the mod settings). |  |
+| [Remove ads](#remove-ads) | Stops the ad SDKs (AppLovin MAX, InMobi, AdMob mediation) from initialising, removes their auto-start providers and the advertising ID / Ad Services permissions. |  |
+| [Remove forced update](#remove-forced-update) | Removes the "this version is no longer supported" dialog that blocks the app when the remote config marks the version as outdated. |  |
+
+</details>
 
 <!-- PATCHES_END -->
 
